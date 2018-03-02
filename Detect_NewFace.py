@@ -1,3 +1,5 @@
+import Dataset_Creator
+import Trainer
 import cv2
 import numpy as np
 
@@ -25,8 +27,6 @@ while(True):
         #(x, y+h) is location of text
         if(ID==1):
             ID="Shubham"
-        elif(ID==2):
-            ID="Gabriel"
         cv2.putText(img, str(ID), (x,y+h), fontface, fontscale, fontcolor)         
     cv2.imshow("Face", img)
     if(cv2.waitKey(1)==ord('q')):
