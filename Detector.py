@@ -1,5 +1,6 @@
 import cv2
 import numpy as np
+import sql_connector
 
 faceDetect = cv2.CascadeClassifier('cascades/haarcascade_frontalface_default.xml')
 cam=cv2.VideoCapture(0)
@@ -23,11 +24,8 @@ while(True):
         ID, conf = rec.predict(gray[y:y+h, x:x+w])
         #str(id) is the text you want to print next to the face.
         #(x, y+h) is location of text
-        if(ID==1):
-            ID="Shubham"
-        elif(ID==2):
-            ID="Gabriel"
-        cv2.putText(img, str(ID), (x,y+h), fontface, fontscale, fontcolor)         
+        name = sql_connector.retrieve(ID)
+        cv2.putText(img, name, (x,y+h), fontface, fontscale, fontcolor)         
     cv2.imshow("Face", img)
     if(cv2.waitKey(1)==ord('q')):
         break

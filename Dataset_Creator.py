@@ -1,13 +1,14 @@
 import cv2
 import numpy as np
+import sql_connector
 
 #Create facedetect object
 faceDetect = cv2.CascadeClassifier('cascades/haarcascade_frontalface_default.xml')
 #Catpure video from webcam
 cam=cv2.VideoCapture(0)
 
-id=raw_input('Enter user id: ')
 name=raw_input('Enter name: ')
+id = sql_connector.insert(name)
 sampleNumber=0
 while(True):
     ret, img = cam.read()
@@ -25,7 +26,7 @@ while(True):
         cv2.waitKey(100)
     cv2.imshow("Face", img)
     cv2.waitKey(1)
-    if(sampleNumber>20):
+    if(sampleNumber>19):
         break
 
 #release camera
