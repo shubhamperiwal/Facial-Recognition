@@ -1,6 +1,7 @@
 import Dataset_Creator
 import Trainer
 import cv2
+import sql_connector
 import numpy as np
 
 #Create facedetect object

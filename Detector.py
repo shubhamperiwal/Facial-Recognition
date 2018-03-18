@@ -22,8 +22,7 @@ while(True):
     for(x,y,w,h) in faces:
         cv2.rectangle (img, (x,y), (x+w, y+h), (0,0,255), 2)
         ID, conf = rec.predict(gray[y:y+h, x:x+w])
-        #str(id) is the text you want to print next to the face.
-        #(x, y+h) is location of text
+        #str(id) is the text you want to print next to the face. #(x, y+h) is location of text
         name = sql_connector.retrieve(ID)
         cv2.putText(img, name, (x,y+h), fontface, fontscale, fontcolor)         
     cv2.imshow("Face", img)

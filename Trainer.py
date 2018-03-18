@@ -2,7 +2,7 @@
 import os
 import cv2
 import numpy as np
-#need pillow to capture images. PIL is Python Image Library
+#PIL is Python Image Library
 from PIL import Image
 
 recognizer = cv2.face.LBPHFaceRecognizer_create()
