@@ -12,5 +12,6 @@ openCV-contrib-python - pip install opencv-contrib-python
 
 pillow                - pip install pillow
 
+mysql-db              - pip install MySQL-python
 ## Executing the code
 Clone this repo and run Detect_NewFace.py to add yourself to the dataset and detect and run Detector.py if you are already added.
