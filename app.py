@@ -47,7 +47,7 @@ AppScreenManager:
     BoxLayout:
         orientation: 'vertical'
         Label:
-            text: 'Get confidential data'
+            text: 'Get launch codes'
             font_size: 50
         BoxLayout:
             orientation: 'horizontal'
@@ -65,7 +65,7 @@ AppScreenManager:
     BoxLayout:
         orientation: 'vertical'
         Label:
-            text: 'Credit Card Number: 4312765980'
+            text: 'Nuclear launch codes: 42Kim$J$Un39'
             font_size: 50
         BoxLayout:
             orientation: 'horizontal'
