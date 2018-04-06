@@ -14,5 +14,9 @@ pillow                - pip install pillow
 
 mysql-db              - pip install mysqlclient
 
+kivy                  - Install kivy using this website (https://kivy.org/docs/installation/installation-windows.html)
+
 ## Executing the code
 Clone this repo and run Detect_NewFace.py to add yourself to the dataset and detect and run Detector.py if you are already added.
+Secondly, you can run app.py if you want to see our graphical user interface.
+
