@@ -1,0 +1,6 @@
+opencv
+numpy
+opencv-contrib-python
+pillow
+mysqlclient
+kivy
